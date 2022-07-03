@@ -1,10 +1,7 @@
 package jh.solutions.finance.entity;
 import javax.persistence.*;
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.beans.BeanUtils;
-import java.util.List;
+import java.util.Date;
 
 @Entity
 @Table(name="Income")
@@ -13,51 +10,28 @@ public class Income {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
-    private Long product_id;
-    private Integer qty;
-    private String product_name;
+    private Integer income_id;
+    private Integer account_book_id;
+    private Date income_date;
+    private Integer income_level_id;
+    private String giver_name1;
+    private String giver_name2;
+    private Long income_amount;
+    private String note;
+    private String giver_class;
+    private String income_method;
+    private Date created_date;
+    private String created_name;
+    private Date updated_date;
+    private String updated_name;
+    private Date checked_date;
+    private Boolean is_checked;
 
-    @PostPersist
-    public void onPostPersist(){
-//        OrderPlaced orderPlaced = new OrderPlaced();
-//        BeanUtils.copyProperties(this, orderPlaced);
-//        orderPlaced.publishAfterCommit();
-    }
-
-    @PreRemove
-    public void onPreRemove(){
-//        OrderCancelled orderCancelled = new OrderCancelled();
-//        BeanUtils.copyProperties(this, orderCancelled);
-//        orderCancelled.publishAfterCommit();
-    }
-
-//    public Long getId() {
-//        return id;
+//    @PostPersist
+//    public void onPostPersist(){
 //    }
 //
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//    public Long getProductId() {
-//        return productId;
-//    }
-//
-//    public void setProductId(Long productId) {
-//        this.productId = productId;
-//    }
-//    public Integer getQty() {
-//        return qty;
-//    }
-//
-//    public void setQty(Integer qty) {
-//        this.qty = qty;
-//    }
-//    public String getProductName() {
-//        return productName;
-//    }
-//
-//    public void setProductName(String productName) {
-//        this.productName = productName;
+//    @PreRemove
+//    public void onPreRemove(){
 //    }
 }
